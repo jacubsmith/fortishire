@@ -1,0 +1,12 @@
+$module: 			'content';
+
+.#{$module}{
+	&__wrapper {
+		width: 100%;
+		max-width: em($pageWidth);
+		margin: 0 auto;
+		background-color: white;
+		height: auto;	
+		padding: em(50) em(25);
+	}
+}

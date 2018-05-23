@@ -1,0 +1,200 @@
+$module: 'form';
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: white;
+  opacity: 0.5;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+  opacity: 0.5;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: white;
+  opacity: 0.5;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+  opacity: 0.5;
+}
+
+%input {
+  position: relative;
+  color: inherit;
+  width: 100%;
+  height: em(60);
+  background-color: rgba(white, 0.2);
+  padding: 0 0 0 em(10);
+  border: none;
+  border-bottom: em(2) solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+  will-change: border-bottom;
+}
+
+%label {
+  $fontSize: 14;
+  font-size: em($fontSize);
+  display: block;
+  margin: 0 0 em(10, $fontSize);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+textarea,
+input,
+select {
+  font-family: $ffPrimary;
+}
+
+.#{$module} {
+  color: white;
+
+  &__btn {
+    text-align: right;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: em(100);
+  }
+
+  &__twoCol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__twoCol__item {
+    flex-basis: calc(50% - 20px);
+
+    @include bp(tab-s-b) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__control {
+    position: relative;
+    margin: 0 0 em(30);
+    width: 100%;
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    left: 0;
+    cursor: pointer;
+
+    &:checked + .#{$module}__label--checkbox {
+      &:after {
+        content: '';
+        color: white;
+        text-align: center;
+        background-image: url('/img/svg/icon-check.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: em(12, 14);
+        width: em(18, 14);
+      }
+    }
+  }
+
+  &__label--checkbox {
+    @extend %label;
+    position: relative;
+    margin-left: em(35);
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: em(14, 14);
+      height: em(14, 14);
+      top: 0;
+      left: em(-23, 14);
+    }
+
+    &:before {
+      background-color: rgba(white, 0.2);
+    }
+  }
+
+  &__label {
+    @extend %label;
+  }
+
+  &__input, .StripeElement {
+    color: inherit;
+    width: 100%;
+    height: em(60);
+    background-color: rgba(white, 0.2);
+    padding: 0 0 0 em(10);
+    border: none;
+    border-bottom: em(2) solid transparent;
+    transition: border-bottom 0.2s ease-in-out;
+    will-change: border-bottom;
+  }
+
+  &__input:focus {
+    outline: none;
+    border-bottom: em(2) solid white;
+  }
+
+  &__input-area {
+    @extend .form__input;
+    height: em(120);
+    padding-top: em(5);
+  }
+
+  &__upload-wrapper {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__upload-label {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: em(14);
+    background-color: rgba(white, 0.2);
+    height: 100%;
+    width: 25%;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top: em(22, 14);
+  }
+
+  &__upload-cover {
+    @extend %input;
+    width: 75%;
+    right: 0;
+    opacity: 1;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &__upload {
+    @extend %input;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__error {
+    background-color: $color5;
+    text-align: center;
+    padding: em(10);
+    @extend .zeta;
+  }
+}

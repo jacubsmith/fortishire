@@ -1,0 +1,41 @@
+$module: 				'blog-listings';
+
+.#{$module} {
+	display: flex;	
+	flex-wrap: wrap;
+
+	@include bp(tab-m) {
+		flex-direction: column;
+		align-items: stretch;
+		flex-wrap: nowrap;
+	}
+
+	&__listing {
+		flex: 0 1 50%;
+		padding: 0 em(25);
+		margin-bottom: em(25);
+
+
+		@include bp(tab-m) {
+			flex: 1 1 100%;
+			margin: em(25) 0;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: em(50);
+		padding: em(20) 0;
+		font-family: $ffHeadings;
+		color: white;
+		text-decoration: none;
+		font-weight: $fwBold;
+		background: rgba($color1, 0.5);
+		
+		&:hover {
+				background: rgba($color1, 1);
+		}
+	}
+}

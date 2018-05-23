@@ -1,0 +1,23 @@
+//
+// Helper classes
+// --------------------------------------------------
+// Toggling content
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+.hidden {
+  overflow: hidden !important;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <div class="loo-calc hide" data-js-calc="calc">
+        <div class="loo-calc__close" data-js-calc="close">X</div>
+        <div class="loo-calc__inner" data-js-calc="wrapper">
+            <div class="loo-calc__entry" data-js-calc="1">
+                <div class="loo-calc__content">
+                    <h2 class="beta">
+                        To find out the best loos for your event,
+                        <br /> please enter:
+                    </h2>
+                    <h2 class="beta">...</h2>
+                    <div class="loo-calc__form">
+                        <span class="loo-calc__field">
+                            <label for="guest" class="loo-calc__label">
+                                Total no. of Guests*
+                            </label>
+                            <input type="number" name="guest" class="loo-calc__input" data-js-calc="guests">
+                        </span>
+                        <span class="loo-calc__field">
+                            <label for="duration" class="loo-calc__label">Event Duration (Hrs)*</label>
+                            <input type="number" name="duration" class="loo-calc__input" data-js-calc="duration">
+                        </span>
+                        <span class="loo-calc__field">
+                            <input type="button" class="loo-calc__button" value="Calculate loos" data-js-calc="generate">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="loo-calc__result" data-js-calc="2">
+                <div class="loo-calc__content--result">
+                    <h2 class="beta">You will need:</h2>
+                    <div class="loo-calc__form">
+                        <h3 class="loo-calc__result-option gamma" data-js-calc="firstOption">
+                        </h3>
+                        <h4 class="loo-calc__seperator delta" data-js-calc="seperator">And</h4>
+                        <h3 class="loo-calc__result-option gamma" data-js-calc="secondOption">
+                        </h3>
+                        <span class="loo-calc__field">
+                            <input type="button" class="loo-calc__button" value="Get a quote" data-js-calc="quoteBtn">
+                        </span>
+                        <span class="loo-calc__field">
+                            <input type="button" class="loo-calc__button" value="Recalculate" data-js-calc="recalculate">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="loo-calc__quote" data-js-calc="3">
+                <div class="loo-calc__content--quote">
+                    <h2 class="beta">To get a price for these loos, please let us know:</h2>
+                    <h2 class="beta">...</h2>
+                    <div class="loo-calc__form">
+                        <form action="https://formspree.io/MAllan@fortishire.co.uk" method="POST" accept-charset="utf-8">
+                            <span class="loo-calc__field">
+                                <label for="postcode" class="loo-calc__label" for="postcode">
+                                    Event Postcode*
+                                </label>
+                                <div class="loo-calc__input">
+                                    <input type="text" name="postcode" style="width: 100%; height: 100%;border: 0; text-align: right;" required />
+                                </div>
+                            </span>
+                        
+                            <span class="loo-calc__field">
+                                <label for="name" class="loo-calc__label" for="name">
+                                    Full Name*
+                                </label>
+                                <div class="loo-calc__input">
+                                    <input type="text" name="name" style="width: 100%; height: 100%;border: 0; text-align: right;" required />
+                                </div>
+                            </span>
+                        
+                        
+                            <span class="loo-calc__field">
+                                <label for="email" class="loo-calc__label" id="label_5" for="email">
+                                    Email Address*
+                                </label>
+                                <div class="loo-calc__input">
+                                    <input type="email" style="width: 100%; height: 100%;border: 0; text-align: right;" name="email" required />
+                                </div>
+                            </span>
+                        
+                            <span class="loo-calc__field">
+                                <label class="loo-calc__label" for="number">
+                                    Contact Number*
+                                </label>
+                                <div class="loo-calc__input">
+                                    <input style="width: 100%; height: 100%;border: 0; text-align: right;" type="tel" name="phone" required />
+                                </div>
+                            </span>
+                            <span class="loo-calc__field">
+                                <button type="submit" class="loo-calc__button">
+                                    Submit
+                                </button>
+                            </span>
+                            <div style="display:none">
+                                <input type="text" name="duration" value="" data-js-calc="durationForm" />
+                                <input type="text" name="guests" value="" data-js-calc="guestForm" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

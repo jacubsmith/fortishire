@@ -1,0 +1,54 @@
+// Typography
+// -------------------------
+
+// weights
+$fwBold: 700;
+$fwSemibold: 600;
+$fwRegular: 400;
+$fwLight: 300;
+$fwSuperlight: 200;
+
+// family
+$ffPrimary: 'Open Sans', sans-serif;;
+$ffSecondary: helvetica, Arial, sans-serif;
+$ffHeadings: $ffSecondary;
+
+// style
+$fzBase: 16 !default;
+$fzMob: 16;
+$lhBase: 22 !default;
+$fwBase: $fwRegular;
+$fwHeading: $fwBase;
+
+// Colors
+// -------------------------
+$color1: #F08700; // Dark Blue		Primary color
+$color2: #00A6A6; // Orange			Secondary color
+$color3: #1d80a8; // Light Blue
+$color4: #EFF2F8; // Light Grey 		Body color
+$color5: #00040f; // Off Black	
+
+// Color roles
+// ----------------
+$colorPrimary: $color1;
+$colorSecondary: $color2;
+$colorBody: $color5 !default;
+$colorText: $color5 !default;
+
+// States: ;
+$colorActive: $color1;
+
+// Headings
+// -------------------------
+$headings: '.alpha', '.beta', '.gamma', '.delta', '.epsilon', '.zeta';
+$headingSizes: 50, 28, 22, 24, 32, 16;
+$headingFamilies: $ffHeadings, $ffHeadings, $ffHeadings, $ffHeadings, $ffPrimary, $ffPrimary;
+$headingColors: inherit, inherit, inherit, inherit, inherit, inherit;
+$headingMargins: 35, 30, 10, 28, 10, 10;
+$headingLineHeights: 50, 32, 22, 14, 32, 16;
+$headingWeight: 300, 300, 300, $fwBold, 300, 300;
+
+// Other
+// -------------------------
+$inOutBack: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+$pageWidth: 1200;

@@ -1,0 +1,57 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Emphasis & misc
+// -------------------------
+
+small {
+	font-size: 85%;
+}
+
+strong {
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+em {
+	font-style: italic;
+}
+
+// Headings
+// -------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: normal;
+	font-weight: normal;
+}
+
+@for $i from 1 through length($headings) {
+	#{nth($headings,$i)} {
+		font-size: em(nth($headingSizes, $i));
+		font-family: #{nth($headingFamilies, $i)};
+		color: #{nth($headingColors, $i)};
+		line-height: (nth($headingLineHeights, $i)/nth($headingSizes, $i));
+		margin-bottom: em(nth($headingMargins, $i), nth($headingSizes, $i));
+		font-weight: nth($headingWeight, $i);
+	}
+}
+
+.alpha, .beta, .gamma, .delta {
+	letter-spacing: 1.2;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.alpha {
+	text-transform: uppercase;
+	text-align: center;
+
+	@include bp(tab-s-b) {
+		font-size: em(50);
+	}
+}

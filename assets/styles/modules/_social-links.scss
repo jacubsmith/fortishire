@@ -1,0 +1,16 @@
+$module: 			'social-links';
+
+
+.#{$module} {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: em(15) 0;
+		
+	& > div {
+		margin: em(5) em(15);
+	}
+}
